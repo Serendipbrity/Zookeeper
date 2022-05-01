@@ -1,5 +1,7 @@
 // because it's an npm package we will use require
 const express = require('express');
+
+const PORT = process.env.PORT || 3001;
 // to instantiate/represent the server. assign express() to app variable so we can chain on methods to the express.js server
 const app = express();
 // create a route that the front end can request from
@@ -48,6 +50,6 @@ app.get('/api/animals', (req, res) => {
     res.json(results);
 });
 // chain listen() method to make the server listen
-app.listen(3001, () => {
-    console.log(`API server now on port 3001!`);
+app.listen(PORT, () => {
+    console.log(`API server now on port ${PORT}!`);
 });
