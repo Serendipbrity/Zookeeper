@@ -8,7 +8,7 @@ const express = require("express");
 // create a route that the front end can request from
 const { animals } = require("./data/animals");
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3002;
 // to instantiate/represent the server. assign express() to app variable so we can chain on methods to the express.js server
 const app = express();
 
